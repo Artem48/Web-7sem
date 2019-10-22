@@ -1,0 +1,23 @@
+/* Переменные */
+@text-color: #7f82ff;
+@button-bg-color: green;
+/* LESS CSS */
+html {
+  color: @text-color;
+  text-align: center;
+}
+#result
+{
+  font-family: fantasy;
+  color: @text-color;
+  font-size: xx-large;
+}
+button {
+  background-color: white;
+  border: 1px solid @button-bg-color;
+  border-radius: 25px;
+  font-style: oblique;
+}
+button:hover {
+  background-color: desaturate(@button-bg-color, 50%);
+}
