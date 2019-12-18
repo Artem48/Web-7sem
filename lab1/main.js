@@ -2,10 +2,10 @@ document.getElementById('search').addEventListener("submit", submit);
 
 async function submit(e) {
     e.preventDefault();
-    if (document.getElementById('search-txt').value === "") {
+    if (e.target[0].value === "") {
         document.getElementById('result').innerHTML = "Enter city name";
     } else {
-        let data = await getWeatherFromAPI(document.getElementById('search-txt').value);
+        let data = await getWeatherFromAPI(e.target[0].value);
         addElementToHTML(data);
     }
 }
