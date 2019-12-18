@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,27 +7,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js"></script>
     <link href="styles.less" type="text/css" rel="stylesheet/less"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.3/less.min.js"></script>
-
+    <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
-<div class="container">
-    <header class="header">
-        <div class="search">
-            <input type="text" placeholder="Enter City Name" id="search-txt">
-            <button id="search-btn">Find</button>
-        </div>
-    </header>
+<form id="search">
+    <input type="text" placeholder="Enter City Name" id="search-txt">
+    <button type="submit">Find</button>
+</form>
 
-    <div id="result">
-
-    </div>
+<div id="result">
 
 </div>
 
 
-<script  src="main.js"></script>
+<script src="main.js"></script>
 <script id="text-template-true" type="text/x-handlebars-template">
     <div>City Name: {{city_name}}</div>
     <div>Weather: {{weather}}</div>
@@ -36,7 +31,7 @@
     <div>Wind: {{wind_spd}}</div>
 </script>
 <script id="text-template-err" type="text/x-handlebars-template">
-    <div>City Name: {{reason}}</div>
+    <div>{{reason}}</div>
 </script>
 </body>
 
