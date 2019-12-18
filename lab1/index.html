@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <title>Weather Application</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js"></script>
-    <link href="styles.less" type="text/css" rel="stylesheet/less"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.3/less.min.js"></script>
     <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
 <form id="search">
-    <input type="text" placeholder="Enter City Name" id="search-txt">
+    <input type="text" placeholder="Enter City Name">
     <button type="submit">Find</button>
 </form>
 
@@ -23,14 +21,14 @@
 
 
 <script src="main.js"></script>
-<script id="text-template-true" type="text/x-handlebars-template">
-    <div>City Name: {{city_name}}</div>
+<script id="textTemplateTrue" type="text/x-handlebars-template">
+    <div>City Name: {{cityName}}</div>
     <div>Weather: {{weather}}</div>
     <div>Temperature: {{temp}}</div>
     <div>Humidity: {{hum}}</div>
-    <div>Wind: {{wind_spd}}</div>
+    <div>Wind: {{windSpd}}</div>
 </script>
-<script id="text-template-err" type="text/x-handlebars-template">
+<script id="textTemplateErr" type="text/x-handlebars-template">
     <div>{{reason}}</div>
 </script>
 </body>

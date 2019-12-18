@@ -18,19 +18,19 @@ async function getWeatherFromAPI(city) {
 
 function addElementToHTML(data){
     if(data.weather){
-        let source = document.getElementById('text-template-true').innerHTML;
+        let source = document.getElementById('textTemplateTrue').innerHTML;
         let template = Handlebars.compile(source);
         let context = {
-            city_name: data.name,
+            cityName: data.name,
             weather: data.weather[0].main,
             temp: parseInt(data.main.temp - 273) + "°",
             hum: data.main.humidity + "%",
-            wind_spd: data.wind.speed + " mps"
+            windSpd: data.wind.speed + " mps"
         };
         document.getElementById('result').innerHTML = template(context);
     }
     else {
-        var source   = document.getElementById('text-template-err').innerHTML;
+        var source   = document.getElementById('textTemplateErr').innerHTML;
         var template = Handlebars.compile(source);
         var context = {reason: "Type a valid city name"};
         document.getElementById('result').innerHTML = template(context);
