@@ -12,7 +12,7 @@ export default function (city) {
     })
         .then((response) => {
             if (!response.ok) {
-                return response.text().then(text => {throw "City was not added: " + text});
+                return response.text().then(text => {throw new Error("City was not added: " + text)});
             }
         })
         .then(() => UpdateCityInfo(city));

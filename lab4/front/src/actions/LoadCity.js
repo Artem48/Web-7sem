@@ -12,5 +12,5 @@ export default function (name) {
         .then((response) => {
             return {"cityName": name, "cityHeader": getHeaderMini(response), "cityInfo": getInfo(response)};
         })
-        .catch(err => {throw "Error loading city weather: " + err.toString()})
+        .catch(err => {throw new Error("Error loading city weather: " + err.toString())})
 }

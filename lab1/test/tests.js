@@ -18,8 +18,6 @@ describe("Нажатие кнопки", function () {
 describe('Проверка запроса', function () {
     it('HttpRequestAsync должен вызывать колбек 1 раз', function () {
         var callback = sinon.spy();
-        // const appKey = "2e19bb27bd5e717bac388dc0c1827b17";
-        // searchLink = "https://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=" + appKey;
         server = sinon.fakeServer.create();
         server.autoRespond = true;
         searchLink = "123";

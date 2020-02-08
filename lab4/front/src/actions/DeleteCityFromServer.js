@@ -12,7 +12,7 @@ export default function (name) {
     })
         .then(response => {
             if (!response.ok && !response.status === 404)
-                return response.text().then(text => {throw "City was not deleted: " + text});
+                return response.text().then(text => {throw new Error("City was not deleted: " + text)});
         })
         .then(() => DeleteCity(name))
         .catch((err) => ErrorLoadList(err.toString()));
